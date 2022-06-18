@@ -41,11 +41,11 @@ const StyledContent = styled(DialogPrimitive.Content, {
   "&:focus": { outline: "none" },
 });
 
-function Content({ children, ...props }) {
+function Content(props: any): JSX.Element {
   return (
     <DialogPrimitive.Portal>
       <StyledOverlay />
-      <StyledContent {...props}>{children}</StyledContent>
+      <StyledContent {...props}>{props.children}</StyledContent>
     </DialogPrimitive.Portal>
   );
 }
@@ -170,7 +170,7 @@ export const DialogDemo = () => (
     <DialogContent>
       <DialogTitle>Edit profile</DialogTitle>
       <DialogDescription>
-        Make changes to your profile here. Click save when you're done.
+        Make changes to your profile here. Click save when you&apos;re done.
       </DialogDescription>
       <Fieldset>
         <Label htmlFor='name'>Name</Label>
