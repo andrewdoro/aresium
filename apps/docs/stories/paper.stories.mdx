@@ -1,0 +1,23 @@
+import { Paper, DialogDemo, Flex } from "@aresium/core/src";
+import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+
+<Meta title='Components/Paper' component={Paper} />
+
+# Paper
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget consectetur tempor, nisl nunc egestas nisi, euismod aliquam nisl nunc euismod.
+
+## Props
+
+<Props of={Box} />
+
+## Examples
+
+<Preview>
+  <Story name='Paper'>
+    <Flex css={{width:"100%"}} justify="center" dir="col  ">
+      <Paper css={{width:"200px",height:"200px"}}></Paper>
+      <DialogDemo /> 
+    </Flex>
+  </Story>
+</Preview>
