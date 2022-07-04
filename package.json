@@ -15,10 +15,10 @@
     "release": "turbo run build --filter=docs^... && changeset publish"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.22.0",
-    "eslint": "^8.15.0",
-    "eslint-config-aresium": "*",
-    "prettier": "^2.5.1",
+    "@changesets/cli": "^2.23.0",
+    "eslint": "^8.19.0",
+    "eslint-config-aresium": "workspace:*",
+    "prettier": "^2.7.1",
     "turbo": "latest"
   }
 }
