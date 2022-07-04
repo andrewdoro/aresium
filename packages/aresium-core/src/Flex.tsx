@@ -1,4 +1,5 @@
-import { styled } from "../stitches.config";
+import { modifyVariantsForStory, styled } from "../stitches.config";
+import type * as Stitches from "@stitches/react";
 
 export const Flex = styled("div", {
   display: "flex",
@@ -112,3 +113,8 @@ export const Flex = styled("div", {
     justify: "flex-start",
   },
 });
+
+type FlexVariants = Stitches.VariantProps<typeof Flex>;
+interface FlexProps extends FlexVariants {}
+// Use this as the type in Story; i.e. `ComponentMeta<typeof ButtonStory>`
+export const FlexStory = modifyVariantsForStory<FlexVariants, FlexProps, typeof Flex>(Flex);

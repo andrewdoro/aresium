@@ -1,6 +1,7 @@
-import { styled } from "../stitches.config";
+import type * as Stitches from "@stitches/react";
+import { modifyVariantsForStory, styled } from "../stitches.config";
 
-export const Button = styled("button", {
+export const BaseButton = styled("button", {
   all: "unset",
   alignItems: "center",
   boxSizing: "border-box",
@@ -32,3 +33,12 @@ export const Button = styled("button", {
     },
   },
 });
+type ButtonVariants = Stitches.VariantProps<typeof BaseButton>;
+interface ButtonProps extends ButtonVariants {}
+
+export const Button = (props: ButtonVariants): JSX.Element => <BaseButton {...props} />;
+export const ButtonForStory = modifyVariantsForStory<
+  ButtonVariants,
+  ButtonProps,
+  typeof BaseButton
+>(BaseButton);
