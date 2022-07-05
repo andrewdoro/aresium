@@ -32,17 +32,22 @@ export const { styled } = createStitches({
     sizes: {
       1: "4px",
       2: "8px",
-      3: "16px",
-      4: "32px",
-      5: "64px",
-      6: "128px",
+      3: "12px",
+      4: "16px",
+      5: "20px",
+      6: "24px",
+      7: "28px",
+      8: "36px",
+      9: "48px",
+      10: "54px",
+      24: "64px",
     },
     radii: {
-      xs: "2px",
-      sm: "4px",
-      md: "8px",
-      lg: "16px",
-      xl: "32px",
+      xs: "4px",
+      sm: "8px",
+      md: "16px",
+      lg: "32px",
+      xl: "64px",
       round: "9999px",
     },
     fontWeights: {},
@@ -110,6 +115,11 @@ export const { styled } = createStitches({
     }),
     linearGradient: (value: [PropertyValue<"color">, PropertyValue<"color">]) => ({
       background: `linear-gradient(145deg, ${value[0]}, ${value[1]})`,
+    }),
+    generateShadow: (value: [PropertyValue<"color">, PropertyValue<"color">, number]) => ({
+      boxShadow: `${value[2]}px ${value[2]}px ${value[2] * 2}px ${
+        value[0]
+      }, ${-value[2]}px ${-value[2]}px ${value[2] * 2}px ${value[1]}`,
     }),
   },
 });

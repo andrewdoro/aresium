@@ -106,7 +106,7 @@ export const Flex = styled("div", {
     },
   },
   defaultVariants: {
-    gap: "lg",
+    gap: "md",
     wrap: "nowrap",
     dir: "row",
     alignItems: "center",
