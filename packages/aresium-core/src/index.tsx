@@ -1,5 +1,5 @@
 import * as React from "react";
-export { Button, ButtonForStory } from "./Button";
+export { Button, ButtonForStory, AnimatedButton } from "./Button";
 export { Paper } from "./Paper";
 export { Box } from "./Box";
 export { DialogDemo } from "./Dialog";
