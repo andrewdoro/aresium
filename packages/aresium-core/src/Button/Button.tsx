@@ -1,14 +1,15 @@
 import type * as Stitches from "@stitches/react";
 import { ComponentProps, forwardRef, useState } from "react";
-import { modifyVariantsForStory, styled } from "../stitches.config";
-import { motion } from "framer-motion";
+import { modifyVariantsForStory, styled } from "../../stitches.config";
+import useAnimateButton from "./useAnimateButton";
 
-export const BaseButton = styled(motion.button, {
+export const BaseButton = styled("button", {
   all: "unset",
+  position: "relative",
   alignItems: "center",
   boxSizing: "border-box",
   userSelect: "none",
-
+  overflow: "hidden",
   "&::before": {
     boxSizing: "border-box",
   },
@@ -62,19 +63,13 @@ export const BaseButton = styled(motion.button, {
     },
   },
 });
-
-const Overlay = styled(motion.div, {
+const Overlay = styled("div", {
   position: "absolute",
   top: 0,
   left: 0,
   width: "100%",
   height: "100%",
-  hovered: {
-    disable: {},
-    active: {
-      background: "$gradient",
-    },
-  },
+  backgroundColor: "$blue5",
 });
 
 type ButtonVariants = Stitches.VariantProps<typeof BaseButton>;
@@ -89,12 +84,12 @@ export const ButtonForStory = modifyVariantsForStory<
 
 const AnimatedButton = forwardRef<HTMLButtonElement, ComponentProps<typeof BaseButton>>(
   (props, ref) => {
-    const [hover, setHover] = useState(false);
+    const { onMouseOver } = useAnimateButton();
     return (
-      <motion.div style={{ position: "relative" }}>
-        <Overlay />
-        <BaseButton ref={ref} {...props} />
-      </motion.div>
+      <BaseButton ref={ref} {...props}>
+        {props.children}
+        <Overlay onMouseOver={onMouseOver} />
+      </BaseButton>
     );
   }
 );

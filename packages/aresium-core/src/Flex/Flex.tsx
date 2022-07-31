@@ -1,4 +1,4 @@
-import { modifyVariantsForStory, styled } from "../stitches.config";
+import { modifyVariantsForStory, styled } from "../../stitches.config";
 import type * as Stitches from "@stitches/react";
 
 export const Flex = styled("div", {
