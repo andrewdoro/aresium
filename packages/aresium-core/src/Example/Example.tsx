@@ -1,5 +1,5 @@
 import type * as Stitches from "@stitches/react";
-import { styled, modifyVariantsForStory } from "../stitches.config";
+import { styled, modifyVariantsForStory } from "../../stitches.config";
 
 const Example = styled("div", {
   variants: {
