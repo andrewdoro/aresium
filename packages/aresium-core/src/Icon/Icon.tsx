@@ -11,7 +11,7 @@ export const Icon = styled("div", {
       sm: { borderRadius: "$sm" },
       md: { borderRadius: "$md" },
       lg: { borderRadius: "$lg" },
-      
     },
+    color: {},
   },
 });
