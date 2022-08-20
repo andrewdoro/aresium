@@ -27,6 +27,4 @@ export default Example;
 type ExampleVariants = Stitches.VariantProps<typeof Example>;
 interface ExampleProps extends ExampleVariants {}
 // Use this as the type in Story; i.e. `ComponentMeta<typeof ButtonStory>`
-export const ExampleStory = modifyVariantsForStory<ExampleVariants, ExampleProps, typeof Example>(
-  Example
-);
+export const ExampleStory = modifyVariantsForStory<ExampleProps, typeof Example>(Example);

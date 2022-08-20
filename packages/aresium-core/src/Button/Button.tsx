@@ -73,14 +73,9 @@ const Overlay = styled("div", {
 });
 
 type ButtonVariants = Stitches.VariantProps<typeof BaseButton>;
-interface ButtonProps extends ButtonVariants {}
 
 export const Button = (props: ButtonVariants): JSX.Element => <BaseButton {...props} />;
-export const ButtonForStory = modifyVariantsForStory<
-  ButtonVariants,
-  ButtonProps,
-  typeof BaseButton
->(BaseButton);
+export const ButtonForStory = modifyVariantsForStory<{}, typeof BaseButton>(BaseButton);
 
 const AnimatedButton = forwardRef<HTMLButtonElement, ComponentProps<typeof BaseButton>>(
   (props, ref) => {

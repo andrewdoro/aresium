@@ -5,3 +5,4 @@ export { Box } from "./Box/Box";
 export { DialogDemo } from "./Dialog/Dialog";
 export { Flex, FlexStory } from "./Flex/Flex";
 export { ExampleStory } from "./Example/Example";
+export { Icon } from "./Icon/Icon";

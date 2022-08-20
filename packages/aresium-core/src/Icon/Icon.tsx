@@ -1,4 +1,5 @@
-import { styled } from "../../stitches.config";
+import Stitches from "@stitches/react/types/stitches";
+import { modifyVariantsForStory, styled } from "../../stitches.config";
 
 export const Icon = styled("div", {
   display: "flex",
@@ -15,3 +16,6 @@ export const Icon = styled("div", {
     color: {},
   },
 });
+
+// Use this as the type in Story; i.e. `ComponentMeta<typeof ButtonStory>`
+export const FlexStory = modifyVariantsForStory<{}, typeof Icon>(Icon);

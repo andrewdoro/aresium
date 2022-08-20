@@ -114,7 +114,5 @@ export const Flex = styled("div", {
   },
 });
 
-type FlexVariants = Stitches.VariantProps<typeof Flex>;
-interface FlexProps extends FlexVariants {}
 // Use this as the type in Story; i.e. `ComponentMeta<typeof ButtonStory>`
-export const FlexStory = modifyVariantsForStory<FlexVariants, FlexProps, typeof Flex>(Flex);
+export const FlexStory = modifyVariantsForStory<{}, typeof Flex>(Flex);
