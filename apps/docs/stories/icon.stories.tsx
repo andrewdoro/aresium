@@ -1,4 +1,5 @@
-import { Icon } from "@aresium/core/src";
+import { Icon, IconStory } from "@aresium/core/src";
+import { DiscIcon } from "@radix-ui/react-icons";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 export default {
@@ -7,19 +8,14 @@ export default {
    * to learn how to generate automatic titles
    */
   title: "Components/Icon",
-  component: FlexStory,
-  argTypes: {
-    justify: {
-      control: { type: "select" },
-    },
-  },
-} as ComponentMeta<typeof FlexStory>;
+  component: IconStory,
+} as ComponentMeta<typeof IconStory>;
 //👇 We create a “template” of how args map to rendering
-const Template: ComponentStory<typeof FlexStory> = (args) => (
-  <FlexStory {...args}>Primary</FlexStory>
+const Template: ComponentStory<typeof IconStory> = (args) => (
+  <IconStory {...args}>
+    <DiscIcon />
+  </IconStory>
 );
 
 export const Primary = Template.bind({});
-Primary.args = {
-  justify: "center",
-};
+Primary.args = {};

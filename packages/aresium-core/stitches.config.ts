@@ -8,6 +8,8 @@ export const { styled } = createStitches({
       ...blue,
       ...red,
       ...green,
+      primary: "$blue6",
+      secondary: "$red6",
       gradient: "linear-gradient(145deg, #e6e6e6, #ffffff)",
     },
     fonts: {
